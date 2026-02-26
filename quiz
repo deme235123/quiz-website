@@ -1,0 +1,89 @@
+import React, { useState } from "react";
+import "./App.css";
+
+const questions = [
+  { question: "Which language is used with React?", answers: [
+      { text: "Python", correct: false },
+      { text: "JavaScript", correct: true },
+      { text: "PHP", correct: false },
+      { text: "C#", correct: false }
+    ] },
+  { question: "What hook is used for state in React?", answers: [
+      { text: "useFetch", correct: false },
+      { text: "useState", correct: true },
+      { text: "useStyle", correct: false },
+      { text: "useData", correct: false }
+    ] },
+  { question: "React is developed by?", answers: [
+      { text: "Google", correct: false },
+      { text: "Microsoft", correct: false },
+      { text: "Facebook (Meta)", correct: true },
+      { text: "Amazon", correct: false }
+    ] }
+];
+
+export default function App() {
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [selectedAnswer, setSelectedAnswer] = useState(null);
+  const [showResult, setShowResult] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleAnswerClick = (index) => {
+    setSelectedAnswer(index);
+    setError("");
+  };
+
+  const handleSubmit = () => {
+    if (selectedAnswer === null) {
+      setError("Please select an answer.");
+      return;
+    }
+
+    setShowResult(true);
+    const isCorrect = questions[currentQuestion].answers[selectedAnswer].correct;
+
+    if (isCorrect) {
+      setTimeout(() => nextQuestion(), 1000);
+    }
+  };
+
+  const nextQuestion = () => {
+    setSelectedAnswer(null);
+    setShowResult(false);
+    setError("");
+    if (currentQuestion + 1 < questions.length) {
+      setCurrentQuestion(currentQuestion + 1);
+    } else {
+      alert("Quiz Finished 🎉");
+      setCurrentQuestion(0);
+    }
+  };
+
+  return (
+    <div className="app">
+      <div className="quiz-card">
+        <h2>{questions[currentQuestion].question}</h2>
+        <div className="answers">
+          {questions[currentQuestion].answers.map((answer, index) => {
+            let className = "answer-btn";
+            if (showResult) {
+              if (answer.correct) className += " correct";
+              else if (index === selectedAnswer) className += " wrong";
+            }
+            return (
+              <button
+                key={index}
+                className={className}
+                onClick={() => handleAnswerClick(index)}
+              >
+                {answer.text}
+              </button>
+            );
+          })}
+        </div>
+        {error && <p className="error">{error}</p>}
+        <button className="submit-btn" onClick={handleSubmit}>Submit</button>
+      </div>
+    </div>
+  );
+}
