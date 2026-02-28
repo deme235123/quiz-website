@@ -1,14 +1,37 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  font-family: Rubik, sans-serif;
+   background-color: #F4F6FA;
+   --card-bg-box: #F4F6FA;
+  --text-color: #313E51;
+  --card-bg: #ffffff;
+  --purple: #A729F5;
+  --slc: #ffffff;
+  --stc: #EDF1F9;
+  --svf: #626C7F;
+  --outOf: #626c7f;
+}
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+body {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+}
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.dark {
+  background-color: #343e4f;
+  --card-bg-box: #F4F6FA;
+  --text-color: #ffffff;
+  --card-bg: #3B4D66;
+  --purple: #A729F5;
+  --slc: #3B4D66;
+  --stc: #2D3949;
+  --svf: #fff;
+   --outOf: #ABC1E1;
+}
+
+* {
+  padding: 0;
+  margin: 0;
 }
