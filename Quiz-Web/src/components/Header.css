@@ -1,0 +1,114 @@
+.Header {
+  width: 1157px;
+  height: 56px;
+  justify-content: space-between;
+  top: 50px;
+  left: 140px;
+  position: fixed;
+  display: flex;
+}
+
+.circle-right {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.circle-left {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.Header div {
+  display: flex;
+}
+
+.switch-label {
+  display: inline-block;
+}
+
+.switch-label input {
+  display: none;
+}
+
+.slider {
+  width: 48px;
+  height: 28px;
+  padding: 4px;
+  border-radius: 999px;
+  background-color: var(--purple);
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+
+
+.h3 {
+  font-family: "Rubik";
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 28px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: var(--text-color);
+}
+
+.slider span {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: white;
+  transition: transform 0.3s ease;
+}
+
+input:checked + .slider {
+  background-color: var(--purple);
+}
+
+.switch-label input:checked + .slider .Thumb {
+  transform: translateX(20px);
+}
+
+.Left-side {
+  width: 253;
+  height: 56;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+}
+
+.rectangle {
+  background-color: #f6e7ff;
+  width: 56px;
+  height: 56px;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: center;
+}
+
+.svg1 {
+  stroke: var(--stc);
+}
+
+.svg3 {
+  fill: var(--svf);
+}
+
+.rectangle svg {
+  width: 29px;
+  height: 35px;
+}
+
+.Switch {
+  width: 128;
+  height: 28;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+}

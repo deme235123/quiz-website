@@ -1,0 +1,149 @@
+.Question-Page {
+  display: flex;
+  align-items: center;
+  width: 1160px;
+  height: 400px;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+}
+
+.outOf {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  font-style: Italic;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: var(--outOf);
+}
+
+.Qleft-side {
+  flex-direction: column;
+  width: 465px;
+  height: 452px;
+  justify-content: space-between;
+}
+
+h2 {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 36px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  color: var(--text-color);
+}
+
+.option div {
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 18px 20px;
+  gap: 32px;
+  isolation: isolate;
+
+  width: 564px;
+  height: 92px;
+
+  background: var(--card-bg);
+  box-shadow: 0px 16px 40px rgba(143, 160, 193, 0.14);
+  border-radius: 24px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+
+  opacity: 1;
+  cursor: pointer;
+}
+
+.option div div {
+  width: 56px;
+  height: 56px;
+  border-radius: 8px;
+  background-color: var(--card-bg-box);
+}
+
+.option div span {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 28px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: var(--text-color);
+}
+
+.slide-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 4px;
+  gap: 8px;
+  margin: 0 auto;
+  width: 465px;
+  height: 16px;
+  background: var(--slc);
+  border-radius: 999px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin-top: 30px;
+}
+
+.slide-bar div {
+  box-sizing: border-box;
+  width: 300px;
+  height: 8px;
+  background: #a729f5;
+  border-radius: 104px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.next-btn {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 32px;
+  gap: 8px;
+  width: 564px;
+  height: 92px;
+  background: #a729f5;
+  box-shadow: 0px 16px 40px rgba(143, 160, 193, 0.14);
+  border-radius: 24px;
+  border: none;
+  color: white;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+  cursor: pointer;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 28px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.Qright-side {
+  width: 564px;
+  height: 564px;
+  gap: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.option {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
