@@ -38,24 +38,20 @@ h2 {
 
 .option div {
   box-sizing: border-box;
-
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 18px 20px;
   gap: 32px;
   isolation: isolate;
-
   width: 564px;
   height: 92px;
-
   background: var(--card-bg);
   box-shadow: 0px 16px 40px rgba(143, 160, 193, 0.14);
   border-radius: 24px;
   flex: none;
   order: 0;
   flex-grow: 0;
-
   opacity: 1;
   cursor: pointer;
 }

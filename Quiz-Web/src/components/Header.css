@@ -45,6 +45,7 @@
   box-sizing: border-box;
   display: flex;
   align-items: center;
+  z-index: 1;
 }
 
 
@@ -84,6 +85,7 @@ input:checked + .slider {
 }
 
 .rectangle {
+  cursor: pointer;
   background-color: #f6e7ff;
   width: 56px;
   height: 56px;

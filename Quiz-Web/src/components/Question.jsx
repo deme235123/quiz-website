@@ -1,4 +1,10 @@
+import data from '../data.json';
+
 function Question() {
+  console.log(data);
+  for(let i = 0; i < data.length; i++) {
+    console.log(data[i]);
+  }
   return (
     <>
       <div className="Question-Page">
