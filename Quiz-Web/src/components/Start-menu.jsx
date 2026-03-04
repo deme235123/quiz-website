@@ -1,4 +1,21 @@
 function StartMenu() {
+
+  const goToHtmlPage = () => {
+    window.location.href = '/Html-questions'
+  }
+
+  const goToCssPage = () => {
+    window.location.href = '/CSS-questions'
+  }
+
+  const goToJsPage = () => {
+    window.location.href = '/Javascript-questions'
+  }
+
+  const goToAcesPage = () => {
+    window.location.href = '/Accesebility-questions'
+  }
+
   return (
     <>
       <div className="Start-menu">
@@ -9,7 +26,7 @@ function StartMenu() {
           <span className="outOf">Pick a subject to get started.</span>
         </div>
         <div className="right-side">
-          <div className="options">
+          <div className="options" onClick={goToHtmlPage}>
             <div className="orange box">
               <svg
                 width="33"
@@ -26,7 +43,7 @@ function StartMenu() {
             </div>
             HTML
           </div>
-          <div className="options">
+          <div className="options" onClick={goToCssPage}>
             <div className="green box">
               <svg
                 width="23"
@@ -43,7 +60,7 @@ function StartMenu() {
             </div>
             CSS
           </div>
-          <div className="options">
+          <div className="options" onClick={goToJsPage}>
             <div className="blue box">
               <svg
                 width="30"
@@ -60,7 +77,7 @@ function StartMenu() {
             </div>
             Javascript
           </div>
-          <div className="options">
+          <div className="options"  onClick={goToAcesPage}>
             <div className="purple box">
               <svg
                 width="30"
@@ -75,7 +92,7 @@ function StartMenu() {
                 />
               </svg>
             </div>
-             Accesebility
+             Accessebility
           </div>
         </div>
       </div>

@@ -3,8 +3,11 @@ import "./components/Header.css";
 import "./components/Start-menu.css";
 import "./components/Question.css";
 import Header from "./components/header"
-import Question from "./components/Question";
+import HTMLquestion from "./components/HTML-Questions";
 import StartMenu from "./components/Start-menu";
+import AccesebilityQuestion from './components/Accesebility-Question';
+import CSSQuestion from './components/CSS-Questions'
+import JSQuestion from './components/Javascript-Questions'
 
 function App() {
   return (
@@ -13,7 +16,10 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<StartMenu />} />
-        <Route path="/question" element={<Question />} />
+        <Route path="/Html-questions" element={<HTMLquestion />} />
+        <Route path='/Accesebility-questions' element={<AccesebilityQuestion />} />
+        <Route path='/CSS-questions' element={<CSSQuestion />} />
+        <Route path='/Javascript-questions' element={<JSQuestion />} />
       </Routes>
     </BrowserRouter>
     </>
