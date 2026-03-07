@@ -1,6 +1,5 @@
 // App.jsx
 import React, { useState } from "react";
-import "./app.css";
 
 const questions = [
   {
